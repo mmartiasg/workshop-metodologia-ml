@@ -1,0 +1,2 @@
+model_checkpoint_path: "temporal_checkpoint"
+all_model_checkpoint_paths: "temporal_checkpoint"
