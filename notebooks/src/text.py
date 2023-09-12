@@ -14,3 +14,12 @@ classes_table = tf.lookup.StaticHashTable(
                             tf.lookup.KeyValueTensorInitializer(CLASSES, range(len(CLASSES))),
                             default_value=-1
                         )
+
+translate_table = tf.lookup.StaticHashTable(
+    initializer=tf.lookup.KeyValueTensorInitializer(
+        keys=range(len(CLASSES)),
+        values=CLASSES,
+    ),
+    default_value=tf.constant("N/A"),
+    name="main_categories"
+)
